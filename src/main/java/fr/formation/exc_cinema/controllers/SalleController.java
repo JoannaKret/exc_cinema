@@ -23,22 +23,22 @@ public class SalleController {
     }
 
     @GetMapping("{id}")
-    public Optional<Salle> findById(String id) {
+    public Optional<Salle> findById(@PathVariable String id) {
         return this.salleService.findById(id);
     }
 
     @PostMapping
-    public Salle addSale(Salle salle) {
+    public Salle addSale(@RequestBody Salle salle) {
         return this.salleService.saveSalle(salle);
     }
 
     @PutMapping
-    public Salle updateSale(Salle salle) {
+    public Salle updateSale(@RequestBody Salle salle) {
         return this.salleService.saveSalle(salle);
     }
 
     @DeleteMapping
-    public String removeSalle(Salle salle) {
+    public String removeSalle(@RequestBody Salle salle) {
         this.salleService.removeSalle(salle);
         return "La salle vient d'être suprimée";
     }

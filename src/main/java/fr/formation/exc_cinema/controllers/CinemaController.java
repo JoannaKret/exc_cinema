@@ -29,17 +29,17 @@ public class CinemaController {
     }
 
     @PostMapping
-    public Cinema addCinema(Cinema cinema) {
+    public Cinema addCinema(@RequestBody Cinema cinema) {
         return this.cinemaService.saveCinema(cinema);
     }
 
     @PutMapping
-    public Cinema updateCinema(Cinema cinema) {
+    public Cinema updateCinema(@RequestBody Cinema cinema) {
         return this.cinemaService.saveCinema(cinema);
     }
 
     @DeleteMapping
-    public String removeCinema(Cinema cinema) {
+    public String removeCinema(@RequestBody Cinema cinema) {
         this.cinemaService.removeCinema(cinema);
         return "Le cinéma à été supprimé.";
     }
