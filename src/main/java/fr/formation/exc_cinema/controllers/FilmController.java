@@ -40,6 +40,6 @@ public class FilmController {
     @DeleteMapping
     public String removeFilm(@RequestBody Film film) {
         this.filmService.removeFilm(film);
-        return "Le film vient d'être supprimé.";
+        return "Le film " + film.getTitre() + " vient d'être supprimé.";
     }
 }

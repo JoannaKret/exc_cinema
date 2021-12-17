@@ -41,6 +41,6 @@ public class CinemaController {
     @DeleteMapping
     public String removeCinema(@RequestBody Cinema cinema) {
         this.cinemaService.removeCinema(cinema);
-        return "Le cinéma à été supprimé.";
+        return "Le cinéma " + cinema.getNom() + " a été supprimé.";
     }
 }

@@ -40,6 +40,6 @@ public class SalleController {
     @DeleteMapping
     public String removeSalle(@RequestBody Salle salle) {
         this.salleService.removeSalle(salle);
-        return "La salle vient d'être suprimée";
+        return "La salle " + salle.getNumero() + " vient d'être suprimée";
     }
 }
