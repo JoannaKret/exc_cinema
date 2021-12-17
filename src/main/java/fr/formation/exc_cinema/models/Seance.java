@@ -8,6 +8,7 @@ import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDate;
+import java.util.Date;
 
 @Data
 @AllArgsConstructor
@@ -17,7 +18,7 @@ public class Seance {
 
     @Id
     private String id;
-    private LocalDate date;
+    private Date date;
     @DBRef
     private Film film;
 }

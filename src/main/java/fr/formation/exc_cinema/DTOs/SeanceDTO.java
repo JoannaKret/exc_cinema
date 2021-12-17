@@ -1,21 +1,19 @@
-package fr.formation.exc_cinema.models;
+package fr.formation.exc_cinema.DTOs;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.annotation.sql.DataSourceDefinitions;
 import java.util.Date;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-@Document
-public class Film {
+public class SeanceDTO {
 
     @Id
     private String id;
-    private String titre;
-    private Float duree;
+    private Date date;
 }
